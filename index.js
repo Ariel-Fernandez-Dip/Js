@@ -90,3 +90,28 @@ function actualizarDisplay(){
 };
 
 clear();
+
+let modoOscuro = document.getElementById("modo");
+chequearModoOscuro(localStorage.getItem("oscuro"))
+console.log(localStorage.getItem("oscuro"))
+function chequearModoOscuro(modo){
+    if (modo == "true"){
+        console.log("true")
+        document.body.id = "modoNormal"
+    }
+    else{
+        console.log("false")
+        document.body.id = "oscuro"
+    }
+}
+
+modoOscuro.onclick = () =>{
+    if (localStorage.getItem("oscuro") == "true"){
+        localStorage.setItem("oscuro", "false")
+        chequearModoOscuro(localStorage.getItem("oscuro"))
+    }
+    else{
+        localStorage.setItem("oscuro", "true")
+        chequearModoOscuro(localStorage.getItem("oscuro"))
+    }
+}

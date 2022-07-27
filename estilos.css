@@ -1,7 +1,6 @@
 body {
     padding: 0;
     margin: 0;
-    background: linear-gradient(to right, yellow, black)
 }
 
 .calculadora-grilla {
@@ -39,4 +38,12 @@ body {
 .calculadora-grilla > button:hover {
     background-color: rgba(109, 129, 147, 0.301);
 
+}
+
+#oscuro {
+    background: linear-gradient(to right, yellow, black);
+}
+
+#modoNormal{
+    background: linear-gradient(to right, rgb(255, 255, 255), rgb(255, 247, 0));
 }
