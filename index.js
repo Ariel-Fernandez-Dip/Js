@@ -122,6 +122,8 @@ fetch("./data.json")
 .then(response => response.json())
 .then(data => oscuro = (data[0].nombre),actualizar())
 function actualizar(){
-    document.querySelector("#modo").textContent=oscuro
+    setTimeout ( () => {
+        document.querySelector("#modo").textContent=oscuro
+    },100)
 };
 
